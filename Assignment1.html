@@ -9,7 +9,9 @@
 
 <script>
 function inputChanged(){
-    alert( $("#borderWidth").val());
+    var x = $("#borderWidth").val() + "px";
+    alert(x);
+    $("#result").css("border-width", x);
     }
 </script>
 
