@@ -10,8 +10,13 @@
 <script>
 function inputChanged(){
     var x = $("#borderWidth").val() + "px";
-    alert(x);
     $("#result").css("border-width", x);
+    
+    var x = $("#borderRadius").val() + "px";
+    $("#result").css("border-radius", x);
+    
+    var x = "#" + $("#borderColor").val();
+    $("#result").css("border-color", x);
     }
 </script>
 
@@ -26,14 +31,14 @@ function inputChanged(){
 <input onchange="inputChanged()" type="number" id="borderRadius">
 
 <label for="borderColor">border-color</label>
-<input onchange="inoutChanged()" type="number" id="borderColor">
+<input onchange="inoutChanged()" type="text" id="borderColor">
 
-<div id="result" style="height:100px;width:100px;background:gray"></div>
+<div id="result" style="height:100px;width:100px;background:gray;border-style:solid;"></div>
     
 <form>
     <p>height <input type="number" name="height"> px</p>
     <p>width <input type="number" name="width"> px</p>
-    <p>background color #<input type="hex-code" name="background color"></p>
+    <p>background color #<input type="text" name="background-color"></p>
 </form>
 
 
