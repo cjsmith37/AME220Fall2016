@@ -5,21 +5,25 @@
 <style>
 </style>
 
-<script>
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
+<script>
+function inputChanged(){
+    }
+</script>
+
 
 </head>
 
 
 <body>
-<label>border-width</label>
+<label for="borderWidth">border-width</label>
 <input type="number" id="borderWidth">
 
-<label>border-radius</label>
+<label for="borderRadius">border-radius</label>
 <input type="number" id="borderColor">
 
-<label>border-color</label>
+<label for="borderColor">border-color</label>
 <input type="number" id="borderRadius">
 
 <div id="result" style="height:100px;width:100px;background:gray"></div>
@@ -27,7 +31,7 @@
 <form>
     <p>height <input type="number" name="height"> px</p>
     <p>width <input type="number" name="width"> px</p>
-    <p>background color #<input type="hexcode" name="background color"></p>
+    <p>background color #<input type="hex-code" name="background color"></p>
 </form>
 
 
