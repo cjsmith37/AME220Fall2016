@@ -18,14 +18,14 @@ function inputChanged(){
    var x = "#" + $("#borderColor").val();
    $("#result").css("border-color", x);
     
-    //var x = $("#backgroundWidth").val() + "px";
-   // $("#result").css("background-width", x);
+    var x = $("#backgroundWidth").val() + "px";
+    $("#result").css("background-width", x);
     
-    //var x = $("#backgroundHeight").val() + "px";
-   // $("#result").css("background-height", x);
+    var x = $("#backgroundHeight").val() + "px";
+    $("#result").css("background-height", x);
     
-    //var x = "#" + $("#backgroundColor").val();
-   // $("#result").css("background-color", x);
+    var x = "#" + $("#backgroundColor").val();
+   $("#result").css("background-color", x);
     }
 </script>
 
@@ -45,7 +45,7 @@ function inputChanged(){
 <div id="result" style="height:100px;width:100px;background:gray;border-style:solid;"></div> 
     
 
-<!-- <p><label for="backgroundHeight">height</label>
+<p><label for="backgroundHeight">height</label>
 <input onchange="inputChanged()" type="number" id="backgroundHeight">px</p>
     
 <p><label for="backgroundWidth">width</label> 
@@ -54,7 +54,7 @@ function inputChanged(){
 <p><label for="backgroundColor">background color</label> 
   #<input onchange="inputChanged()" type="text" id="backgroundColor"></p>
 
-<div id="result" style="height:100px;width:100px;color:red;"></div> -->
+<div id="result" style="height:100px;width:100px;color:red;"></div> 
 
 
 </body>
