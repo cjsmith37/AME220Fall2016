@@ -19,10 +19,10 @@ function inputChanged(){
   // $("#result").css("border-color", x);
     
     var x = $("#backgroundWidth").val() + "px";
-    $("#result").css("background-width", x);
+    $("#result").css("width", x);
     
     var x = $("#backgroundHeight").val() + "px";
-    $("#result").css("background-height", x);
+    $("#result").css("height", x);
     
     var x = "#" + $("#backgroundColor").val();
     $("#result").css("background-color", x);
@@ -51,7 +51,7 @@ function inputChanged(){
 <p><label for="backgroundColor">background color</label> 
   #<input onchange="inputChanged()" type="text" id="backgroundColor"></p>
 
-<div id="result" style="height:100px;width:100px;background:red;"></div>
+<div id="result" style="height:100px;width:100px;background-color:red;"></div>
     
 
 
