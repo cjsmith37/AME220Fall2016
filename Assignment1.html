@@ -24,8 +24,8 @@ function inputChanged(){
     var x = $("#squareHeight").val() + "px";
     $("#result").css("square-height", x);
     
-    var x = "#" + $("#backgroundColor").val();
-    $("#result").css("background-color", x);
+    var x = "#" + $("#squareColor").val();
+    $("#result").css("square-color", x);
     }
 </script>
 
@@ -51,10 +51,10 @@ function inputChanged(){
 <p><label for="squareWidth">width</label> 
 <input onchange="inputChanged()" type="number" id="squareWidth">px</p>
     
-<p><label for="backgroundColor">background-color</label> 
-# <input onchange="inputChanged()" type="text" id="backgroundColor"></p>
+<p><label for="squareColor">background color</label> 
+# <input onchange="inputChanged()" type="text" id="squareColor"></p>
 
-<div id="result" style="height:100 px;width:100px;background:red;border-style:none;"></div>
+<div id="result" style="#height:100 px;#width:100px;#background:red;border-style:none;"></div>
 
 
 </body>
