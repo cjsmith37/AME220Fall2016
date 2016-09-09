@@ -9,23 +9,23 @@
 
 <script>
 function inputChanged(){
-    var x = $("#borderWidth").val() + "px";
-    $("#result").css("border-width", x);
+    // var x = $("#borderWidth").val() + "px";
+  //  $("#result").css("border-width", x);
     
-    var x = $("#borderRadius").val() + "px";
-    $("#result").css("border-radius", x);
+   // var x = $("#borderRadius").val() + "px";
+  //  $("#result").css("border-radius", x);
     
-    var x = "#" + $("#borderColor").val();
-    $("#result").css("border-color", x);
+  //  var x = "#" + $("#borderColor").val();
+  //  $("#result").css("border-color", x);
     
     var x = $("#squareWidth").val() + "px";
-    $("#change").css("square-width", x);
+    $("#result").css("square-width", x);
     
     var x = $("#squareHeight").val() + "px";
-    $("#change").css("square-height", x);
+    $("#result").css("square-height", x);
     
     var x = "#" + $("#squareColor").val();
-    $("#change").css("square-color", x);
+    $("#result").css("square-color", x);
     }
 </script>
 
@@ -33,7 +33,7 @@ function inputChanged(){
 
 
 <body>
-<label for="borderWidth">border-width</label>
+<!-- <label for="borderWidth">border-width</label>
 <input onchange="inputChanged()" type="number" id="borderWidth">
 
 <label for="borderRadius">border-radius</label>
@@ -42,7 +42,7 @@ function inputChanged(){
 <label for="borderColor">border-color</label>
 <input onchange="inputChanged()" type="text" id="borderColor">
 
-<div id="result" style="height:100px;width:100px;background:gray;border-style:solid;"></div>
+<div id="result" style="height:100px;width:100px;background:gray;border-style:solid;"></div> -->
     
 <form>
     <p><label for="squareHeight">height</label>
@@ -52,9 +52,9 @@ function inputChanged(){
     <input onchange="inputChanged()" type="number" id="squareWidth"> px</p>
     
     <p><label for="squareColor">background color</label> 
-    #<input onchange="inputChanged()" type="text" id="squareColor"></p>
+     #<input onchange="inputChanged()" type="text" id="squareColor"></p>
 
-<div id="change" style="height:100px;width:100px;background:red;"></div>
+<div id="result" style="height:100px;width:100px;background:red;border-style:solid;"></div>
 </form>
 
 </body>
