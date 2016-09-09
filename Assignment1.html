@@ -9,14 +9,6 @@
 
 <script>
 function inputChanged(){
-    // var x = $("#borderWidth").val() + "px";
-     // $("#result").css("border-width", x);
-    
-    //var x = $("#borderRadius").val() + "px";
-   // $("#result").css("border-radius", x);
-    
-   //var x = "#" + $("#borderColor").val();
-  // $("#result").css("border-color", x);
     
     var x = $("#backgroundWidth").val() + "px";
     $("#result").css("width", x);
@@ -33,14 +25,6 @@ function inputChanged(){
 
 
 <body>
-<!-- <label for="borderWidth">border-width</label>
-<input onchange="inputChanged()" type="number" id="borderWidth">
-
-<label for="borderRadius">border-radius</label>
-<input onchange="inputChanged()" type="number" id="borderRadius">
-
-<label for="borderColor">border-color</label>
-<input onchange="inputChanged()" type="text" id="borderColor"> -->
 
 <p><label for="backgroundHeight">height</label>
 <input onchange="inputChanged()" type="number" id="backgroundHeight">px</p>
@@ -53,11 +37,5 @@ function inputChanged(){
 
 <div id="result" style="height:100px;width:100px;background-color:red;"></div>
     
-
-
-
-<!-- <div id="result" style="height:100px;width:100px;color:red;border-style:solid;"></div> --> 
-
-
 </body>
 </html>
