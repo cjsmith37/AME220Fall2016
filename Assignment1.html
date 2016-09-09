@@ -9,7 +9,6 @@
 
 <script>
 function inputChanged(){
-    
     var x = $("#backgroundWidth").val() + "px";
     $("#result").css("width", x);
     
@@ -21,10 +20,19 @@ function inputChanged(){
     }
 </script>
 
+<style>
+    p.border {
+    border-style: solid;
+    border-width: 5px;
+}
+</style>
+
 </head>
 
 
 <body>
+
+<p class="one:>
 
 <p><label for="backgroundHeight">height</label>
 <input onchange="inputChanged()" type="number" id="backgroundHeight">px</p>
@@ -33,9 +41,11 @@ function inputChanged(){
 <input onchange="inputChanged()" type="number" id="backgroundWidth">px</p>
     
 <p><label for="backgroundColor">background color</label> 
-  #<input onchange="inputChanged()" type="text" id="backgroundColor"></p>
+  # <input onchange="inputChanged()" type="text" id="backgroundColor"></p>
 
 <div id="result" style="height:100px;width:100px;background-color:red;"></div>
+
+<</p>
     
 </body>
 </html>
