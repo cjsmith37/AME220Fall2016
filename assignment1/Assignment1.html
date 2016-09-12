@@ -1,0 +1,74 @@
+<DOCTYPE! html>
+<html>
+
+<head>
+<style>
+</style>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+
+<script>
+function inputChanged(){
+    var x = $("#backgroundWidth").val() + "px";
+    $("#result").css("width", x);
+    
+    var x = $("#backgroundHeight").val() + "px";
+    $("#result").css("height", x);
+    
+    var x = "#" + $("#backgroundColor").val();
+    $("#result").css("background-color", x);
+    }
+</script>
+
+<style>
+   div.one {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 20%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 80px;
+    margin-left: 80px;
+    padding: 50px;
+}
+
+input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=number] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+</style>
+
+</head>
+
+
+<body>
+
+<div class="one">
+
+<p style="align:center;font-family:verdana;"><label for="backgroundHeight">height </label>
+<input onchange="inputChanged()" type="number" id="backgroundHeight" width="50%"> px</p>
+    
+<p style="align:center;font-family:verdana;"><label for="backgroundWidth">width </label> 
+<input onchange="inputChanged()" type="number" id="backgroundWidth" width="50%"> px</p>
+    
+<p style="align:center;font-family:verdana;"><label for="backgroundColor">background color  </label> 
+  # <input onchange="inputChanged()" type="text" id="backgroundColor" width="50%"></p>
+  
+<br>
+<br>
+<br>
+<div id="result" style="height:100px;width:100px;background-color:red;align:center;"></div>
+
+</div>
+    
+</body>
+</html>
