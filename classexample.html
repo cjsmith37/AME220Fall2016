@@ -5,18 +5,27 @@
 <style>
 </style>
 
-<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script> -->
 
 <script>
 function inputChanged(){
-    var x = $("#borderWidth").val() + "px";
-     $("#result").css("border-width", x);
+    //var x = $("#borderWidth").val() + "px";
+    // $("#result").css("border-width", x);
     
-    var x = $("#borderRadius").val() + "px";
-   $("#result").css("border-radius", x);
+    var x = document.getElementById("borderWidth").value + "px";
+    document.getElementById("result").style.borderWidth = x;
     
-   var x = "#" + $("#borderColor").val();
-   $("#result").css("border-color", x);
+   //var x = $("#borderRadius").val() + "px";
+  // $("#result").css("border-radius", x);
+  
+  var x = document.getElementById("borderRadius").value + "px";
+  document.getElementById("result").style.borderRadius = x;
+    
+   //var x = "#" + $("#borderColor").val();
+   //$("#result").css("border-color", x);
+   
+   var # = document.getElementById("borderColor").value + "px";
+   document.getElementById("result").style.borderColor = x;
     
     }
 </script>
