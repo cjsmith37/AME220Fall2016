@@ -18,13 +18,14 @@ var x = document.getElementById("result").style.backgroundWidth = "x";
     
 //var x = $("#backgroundHeight").val() + "px";
 
-var x = document.getElementById("backgroundHeight"
+var x = document.getElementById("backgroundHeight").value + "px";
+var x = document.getElementById("result").style.backgroundHeight = "x";
 
 //$("#result").css("height", x);
     
     var x = "#" + $("#backgroundColor").val();
     $("#result").css("background-color", x);
-    } -->
+    } 
     
 </script>
 
