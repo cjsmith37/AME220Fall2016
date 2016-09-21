@@ -8,9 +8,13 @@
 var Sets = {
 union: function(setA,setB) { 
  var setR = [];
- var pointer = ;
+ var pointer = 0;
  while(pointer < setA.length) {
-  console.log(setA[pointer]);
+  var.currEle = setA[pointer];
+  if (setR.indexOf(currEle)) < 0) {
+   //currEle (current element) is not in setR
+   setR[setR.length] = currEle;
+  }
   pointer++;
  
  
