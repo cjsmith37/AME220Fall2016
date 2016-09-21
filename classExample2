@@ -1,0 +1,36 @@
+<!doctype html>
+
+<style>
+
+
+
+<script>
+var Sets = {
+union: function(setA,setB) { 
+ var setR = [];
+ var pointer = ;
+ while(pointer < setA.length) {
+  console.log(setA[pointer]);
+  pointer++;
+ 
+ 
+ }
+ return setR;
+}
+
+}
+</script>
+
+
+
+
+</style>
+
+<head>
+</head>
+
+<body>
+</body>
+
+
+</html>
