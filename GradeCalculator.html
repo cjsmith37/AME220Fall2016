@@ -2,35 +2,85 @@
 
 <head>
 <style>
-<script>
 
+<script>
+var getGradeIE = function(T) 
+  {
+    if (T >= 97) {
+     return "A+";
+    }
+    else if (T >= 93){
+       return "A";
+      }
+      else if (T >= 90){
+          return "A-";
+        }
+        else if (T >= 87){
+            return "B+";
+          }
+          else if (T >= 83) {
+              return "B";
+            }
+            else if (T >= 80) {
+                return "B-";
+              }
+              else if (T >= 77) {
+                  return "C+";
+                }
+                else if (T >= 73) {
+                    return "C";
+                  }
+                  else if (T >= 70) {
+                      return "C-"; 
+                    }
+                    else if(T >= 60) {
+                        return "D";
+                      }
+                      else 
+                        return "E";
+  }
+                      
+    }
 var calcResult = function() {
   var total = 0;
   if (!isNaN(parseFloat(document.getElementByID("a1").value)))
      total += parseFloat(document.getElementById("a1").value);
+  console.log(total);
+  
   if (!isNaN(parseFloat(document.getElementByID("a2").value)))
      total += parseFloat(document.getElementById("a2").value);
+
   if (!isNaN(parseFloat(document.getElementByID("a3").value)))
      total += parseFloat(document.getElementById("a3").value);
+
+  
   if (!isNaN(parseFloat(document.getElementByID("a4").value)))
      total += parseFloat(document.getElementById("a4").value);
+
+  
   if (!isNaN(parseFloat(document.getElementByID("a5").value)))
      total += parseFloat(document.getElementById("a5").value);
+
+  
   if (!isNaN(parseFloat(document.getElementByID("a6").value)))
      total += parseFloat(document.getElementById("a6").value);
+
+  
   if (!isNaN(parseFloat(document.getElementByID("aF").value)))
      total += parseFloat(document.getElementById("aF").value);
+
   
   
   
-document.getElementById("result").innerHTML = "Total: " + total.toString();
+document.getElementById("result").innerHTML = "Total: " + total.toString() + "<br> Grade: " + getGradeIE(total);
   
 }
   
   
   
 </script>
-</style>
+
+e</style>
 </head>
 
 
@@ -47,7 +97,7 @@ document.getElementById("result").innerHTML = "Total: " + total.toString();
 <input id='a3' max='15' min='0' type='number' onchange='calcResult()'>
 <br>
 <label for ='a4'>Assignment 4</label>
-<input id='a4' max='10' min='0' type='number' onchange='calcResult()'>
+<input id='a4' max='15' min='0' type='number' onchange='calcResult()'>
 <br>
 <label for ='a5'>Assignment 5</label>
 <input id='a5' max='20' min='0' type='number' onchange='calcResult()'>
@@ -59,7 +109,7 @@ document.getElementById("result").innerHTML = "Total: " + total.toString();
 <input id='aF' max='10' min='0' type='number' onchange='calcResult()'>
 <br>
 
-<div id='result'>  </div>
+Total<div id='result'>  </div>
 </body>
 
 </html>
