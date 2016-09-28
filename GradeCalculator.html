@@ -6,25 +6,25 @@
 
 var calcResult = function() {
   var total = 0;
-  if (parseFloat(document.getElementByID("a1").value) != NaN
+  if (parseFloat(document.getElementByID("a1").value) == NaN
      total += parseFloat(document.getElementById("a1").value);
-  if (parseFloat(document.getElementByID("a2").value) != NaN
+  if (parseFloat(document.getElementByID("a2").value) == NaN
      total += parseFloat(document.getElementById("a2").value);
-  if (parseFloat(document.getElementByID("a3").value) != NaN
+  if (parseFloat(document.getElementByID("a3").value) == NaN
      total += parseFloat(document.getElementById("a3").value);
-  if (parseFloat(document.getElementByID("a4").value) != NaN
+  if (parseFloat(document.getElementByID("a4").value) == NaN
      total += parseFloat(document.getElementById("a4").value);
-  if (parseFloat(document.getElementByID("a5").value) != NaN
+  if (parseFloat(document.getElementByID("a5").value) == NaN
      total += parseFloat(document.getElementById("a5").value);
-  if (parseFloat(document.getElementByID("a6").value) != NaN
+  if (parseFloat(document.getElementByID("a6").value) == NaN
      total += parseFloat(document.getElementById("a6").value);
-  if (parseFloat(document.getElementByID("aF").value) != NaN
+  if (parseFloat(document.getElementByID("aF").value) == NaN
      total += parseFloat(document.getElementById("aF").value);
   
   
   
   
-  document.getElementById("result").innerHTML = "Total:" + total.toS;
+  document.getElementById("result").innerHTML = "Total: " + total.toString();
   
 }
   
