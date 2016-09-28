@@ -3,7 +3,14 @@
 <head>
 <style>
 <script>
-if 
+
+var calcResult = function() {
+  var total = 0;
+  total += document.getElementByID("a1").value;
+}
+  
+  
+  
 </script>
 </style>
 </head>
@@ -13,22 +20,22 @@ if
 <h1>AME 220 Grade Calculator</h1>
 
 <label for ='a1'>Assignment 1</label>
-<input id='a1' max='15' min='0' type='number'>
+<input id='a1' max='15' min='0' type='number' onchange='calcResult()'>
 <br>
 <label for ='a2'>Assignment 2</label>
-<input id='a2' max='15' min='0' type='number'>
+<input id='a2' max='15' min='0' type='number' onchange='calcResult()'>
 <br>
 <label for ='a3'>Assignment 3</label>
-<input id='a3' max='15' min='0' type='number'>
+<input id='a3' max='15' min='0' type='number' onchange='calcResult()'>
 <br>
 <label for ='a4'>Assignment 4</label>
-<input id='a4' max='20' min='0' type='number'>
+<input id='a4' max='20' min='0' type='number' onchange='calcResult()'>
 <br>
 <label for ='a5'>Assignment 5</label>
-<input id='a5' max='20' min='0' type='number'>
+<input id='a5' max='20' min='0' type='number' onchange='calcResult()'>
 <br>
 <label for ='aF'>Final</label>
-<input id='aF' max='10' min='0' type='number'>
+<input id='aF' max='10' min='0' type='number' onchange='calcResult()'>
 <br>
 
 <div id='result'> </div>
