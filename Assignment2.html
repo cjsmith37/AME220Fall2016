@@ -27,18 +27,6 @@ div.panel {
 div.panel.show {
     display: block;
 }
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-  }
-}
-</script>
         </style>
     </head>
 
@@ -95,5 +83,16 @@ for (i = 0; i < acc.length; i++) {
 <p><b>Trusted Friend</b> - Phone number, addresss, mail@email.com</p>
 </div>
 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
 </body>
 </HTML>
