@@ -1,61 +1,59 @@
 <!doctype html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script
+  src="http://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-  
-<script>
-  var hash = window.location.hash.replace("#","");
-  var urls = hash.split(",");
- 
-  var main = function() {
-   var mut = "";
-   var slidemu = "";
-   for(var i = 0; i < urls.length; i++){
-     mut += "<a class='gotoN' href='javascript:goToSlide(" + i + ")'>" + (i+1).toString() + "</a>";
-     slidemu += "<div id='slide' + i + class='slide' style='background-image:url(" + urls[i] + ")'></div>";
-   }
-   document.getElementById("snWrapper").innerHTML = mut;
-   document.getElementById("ssWrapper").innerHTML = slidemu;
-   goToSlide(0);
- }
+<link href="basic.css" rel="stylesheet">
 
+<script>
+  var hash = window.location.hash.replace("#", "");
+  var urls = hash.split(",");
+var main = function(){
+  var mut = "";
+  var slidemu = "";
+  for(var i = 0; i < urls.length; i++){
+     mut += "<a class='gotoN' href='javascript:goToSlide(" + i + ")'>" + (i+1).toString() + "</a>";
+     slidemu += "<div id='slide" + i + "' class='slide' style='background-image:url(" + urls[i] + ")'></div>";
+  }
+  document.getElementById("snWrapper").innerHTML = mut;
+  document.getElementById("ssWrapper").innerHTML = slidemu;
+  goToSlide(0);
+}
 var animation = "fade";
 //var animation = "slide";
-  
-var goToSlide = function(slideno){
-  if(animation == "fade") {
-    $(".slide").animate({"opacity":"0"},1000);
-    $("#slide" + slideno).stop().animate({"opactity":"1"},1000);
-    
-  }
-  else if(animation == "slide") {
-    //Assignment 3
-  }
-  currentSlide = slideno;
-}
-
 var currentSlide = 0;
-  
-var moveLeft() {
-  var nextSlide = (currentSlide == 0) ? urls.length : currentSlide - 1;
-    if(animation == "fade") { 
+var goToSlide = function(slideno){
+    if(animation === "fade"){
+      $(".slide").animate({"opacity":"0"},1000);
+      $("#slide" + slideno).stop().animate({"opacity":"1"},1000);
+    }
+    else if(animation === "slide"){
+      // Assignment 3
+    }
+    currentSlide = slideno;
+}
+var moveLeft = function()
+{
+  var nextSlide = (currentSlide == 0) ? (urls.length - 1) : (currentSlide - 1);
+    if(animation === "fade"){
       currentSlide = nextSlide;
       goToSlide(currentSlide);
     }
-    else if (animation == "slide") {
-    //Assignment 3
-  }
+    else if(animation === "slide"){
+      // Assignment 3
+    }
 }
-
-var moveRight() {
-  if(animation == "fade") {
-  }
-  else if(animation == "slide") {
-    //Assignment 3
-  }
+var moveRight = function()
+{
+    if(animation === "fade"){
+    }
+    else if(animation === "slide"){
+      // Assignment 3
+    }
 }
-
 </script>
 
 <style>
