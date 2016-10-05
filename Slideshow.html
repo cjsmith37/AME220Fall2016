@@ -6,13 +6,14 @@
   
 <script>
   var hash = windows.location.hash;
-  var urls = hash.split.
+  var urls = hash.split(",");
   var urls = ['https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Meripilus_giganteus_%28Karst_1882%29.jpg/952px-Meripilus_giganteus_%28Karst_1882%29.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Zierliche_Koralle_Ramaria_gracilis.JPG/897px-Zierliche_Koralle_Ramaria_gracilis.JPG','https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Panaeolus_semiovatus_LC0334.jpg/800px-Panaeolus_semiovatus_LC0334.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Mycena_atkinsoniana_60804.jpg/800px-Mycena_atkinsoniana_60804.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lactarius_indigo_48568.jpg/800px-Lactarius_indigo_48568.jpg'];
  
   var main = function() {
    var mut = "";
    for(var i = 0; i < urls.length; i++){
      mut += "<a class='gotoN' href='javascript:goToSlide(" + i + ")'>" + (i+1).toString() + "</a>";
+     slidemu += "<div class='slide' style='background-image:url(" + urls[i] + ")'></div>";
    }
    document.getElementById("snWrapper").innerHTML = mut;
  }
