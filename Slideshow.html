@@ -22,6 +22,8 @@
 var animation = "fade";
 var goToSlide = function(slideno){
   if(animation == fade) {
+    $(".slide").animate({"opacity":"0"},1000);
+    
   }
   else if(animation == "slide") {
     //Assignment 3
