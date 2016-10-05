@@ -17,6 +17,7 @@
    }
    document.getElementById("snWrapper").innerHTML = mut;
    document.getElementById("ssWrapper").innerHTML = slidemu;
+   goToSlide(0);
  }
 
 var animation = "fade";
@@ -25,15 +26,37 @@ var animation = "fade";
 var goToSlide = function(slideno){
   if(animation == "fade") {
     $(".slide").animate({"opacity":"0"},1000);
-    $("#slide" + slideno).animate({"opactity":"1"},1000);
+    $("#slide" + slideno).stop().animate({"opactity":"1"},1000);
     
   }
   else if(animation == "slide") {
     //Assignment 3
+  }
+  currentSlide = slideno;
+}
+
+var currentSlide = 0;
+  
+var moveLeft() {
+  if(animation == "fade") { 
+  }
+  else if (animation == "slide") {
+    //Assignment 3
+  }
+}
+
+var moveRight() {
+  if(animation == "fade") {
+  }
+  else if(animation == "slide") {
+    //Assignment 3
+  }
 }
 
 </script>
+
 <style>
+  
   .button{
     min-width: 50px;
     text-align: center;
@@ -47,6 +70,7 @@ var goToSlide = function(slideno){
     overflow: hidden;
     margin: 0;
   }
+  
   #ssWrapper {
     height: 90%;
     width: 90%;
