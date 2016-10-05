@@ -38,9 +38,12 @@ var goToSlide = function(slideno){
 var currentSlide = 0;
   
 var moveLeft() {
-  if(animation == "fade") { 
-  }
-  else if (animation == "slide") {
+  var nextSlide = (currentSlide == 0) ? urls.length : currentSlide - 1;
+    if(animation == "fade") { 
+      currentSlide = nextSlide;
+      goToSlide(currentSlide);
+    }
+    else if (animation == "slide") {
     //Assignment 3
   }
 }
