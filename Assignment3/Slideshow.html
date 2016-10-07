@@ -32,7 +32,7 @@ var goToSlide = function(slideno){
     }
     else if(animation === "slide"){
       // Assignment 3
-      $(".slide").animate({"left":"450px"},1000);
+      $(".slide").animate({"left":"none"},1000);
       $("#slide" + slideno).stop().animate({"left":"900px"},1000);
     }
     currentSlide = slideno;
