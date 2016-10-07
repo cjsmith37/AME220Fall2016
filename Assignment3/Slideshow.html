@@ -32,8 +32,8 @@ var goToSlide = function(slideno){
     }
     else if(animation === "slide"){
       // Assignment 3
-      $(".slide").animate(function()){
-      $("#slide" + slideno).slideToggle(); }
+      $(".slide").animate({"left":"0"},1000);
+      $("#slide" + slideno).stop().animate({"left":"1"},1000);
     }
     currentSlide = slideno;
     $(".gotoN").removeClass("active");
@@ -55,7 +55,7 @@ var moveLeft = function()
 var moveRight = function()
 {
   var nextSlide = (currentSlide == urls.length - 1) ? 0 : (currentSlide + 1);
-    if(animation === "fade"){
+     if(animation === "fade"){
       currentSlide = nextSlide;
       goToSlide(currentSlide);
     }
@@ -63,6 +63,7 @@ var moveRight = function()
       // Assignment 3
       currentSlide = nextSlide;
       goToSlide(currentSlide);
+     
     }
 }
 </script>
