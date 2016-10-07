@@ -32,8 +32,8 @@ var goToSlide = function(slideno){
     }
     else if(animation === "slide"){
       // Assignment 3
-      $(".slide").animate({"right":"0"},1000);
-      $("#slide" + slideno).stop().animate({"right":"50%"},1000);
+      $(".slide").animate({"left":"0"},1000);
+      $("#slide" + slideno).stop().animate({"center":"50%"},1000);
     }
     currentSlide = slideno;
     $(".gotoN").removeClass("active");
