@@ -33,7 +33,7 @@ var goToSlide = function(slideno){
     else if(animation === "slide"){
       // Assignment 3
       $(".slide").animate({"left":"0%"},1000);
-      $("#slide" + slideno).stop().animate({"right":"100%"},1000);
+      $("#slide" + slideno).stop().animate({"left":"200%"},1000);
     }
     currentSlide = slideno;
     $(".gotoN").removeClass("active");
