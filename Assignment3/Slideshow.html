@@ -39,7 +39,10 @@ var goToSlide = function(slideno){
       else if(animation == "slide") {
         for(i=0; i < urls.length; i++){
           if(i = slidenum) {
-            $("#slide" + i).animate({"right":"0%"},1000);
+            $("#slide" + i).animate({"right":"0%"},1000,"swing");
+          } else {
+            $("#slide" + i).animate({"right":"100%"},1000,"swing");
+
           }
         }
       }
