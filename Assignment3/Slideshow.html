@@ -48,11 +48,8 @@ var moveLeft = function()
     }
     else if(animation === "slide"){
       // Assignment 3
-      currentSlide < slideno;
+      currentSlide > slideno;
       goToSlide(nextSlide);
-    $(".gotoN").removeClass("active");
-    $("#gotoN" + slideno).stop().addClass("active");
-      
     }
 }
 var moveRight = function()
@@ -64,11 +61,8 @@ var moveRight = function()
     }
     else if(animation === "slide"){
       // Assignment 3
-      currentSlide > slideno;
+      currentSlide < slideno;
       goToSlide(nextSlide);
-    $(".gotoN").removeClass("active");
-    $("#gotoN" + slideno).stop().addClass("active");
-     
     }
 }
 </script>
