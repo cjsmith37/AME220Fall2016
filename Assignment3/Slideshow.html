@@ -50,6 +50,8 @@ var moveLeft = function()
       // Assignment 3
       currentSlide < slideno;
       goToSlide(nextSlide);
+    $(".gotoN").removeClass("active");
+    $("#gotoN" + slideno).stop().addClass("active");
       
     }
 }
@@ -64,6 +66,8 @@ var moveRight = function()
       // Assignment 3
       currentSlide > slideno;
       goToSlide(nextSlide);
+    $(".gotoN").removeClass("active");
+    $("#gotoN" + slideno).stop().addClass("active");
      
     }
 }
