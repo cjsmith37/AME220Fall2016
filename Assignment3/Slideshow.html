@@ -31,17 +31,19 @@ var goToSlide = function(slideno){
       $("#slide" + slideno).stop().animate({"opacity":"1"},1000);
     }
     else if(animation === "slide"){
+ 
       // Assignment 3
       /*$(".slide").animate({"center":"0%"},1000);
       $("#slide" + slideno).stop().animate({"center":"100%"},1000);*/
+      var w = $("body").innerWidth();
       for (i = 0; i < urls.length; i++) {
         if (i == slideno) {
-      $("#slide" + i).stop().animate({"margin-left":"0%"},1000);
+      $("#slide" + i).stop().animate({"margin-left":"0px"},1000);
         }
           else if(i > slideno) {
-            $("#slide" + i).animate({"margin-right":"0%"},1000);
+            $("#slide" + i).animate({"margin-left":"-" + w + "px"},1000);
           } else if(i < slideno){
-            $("#slide" + i).animate({"margin-right":"100%"},1000);
+            $("#slide" + i).animate({"margin-left":w + "px"},1000);
       }
       }
     }
