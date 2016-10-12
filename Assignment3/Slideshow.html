@@ -36,6 +36,13 @@ var goToSlide = function(slideno){
       $(".slide").animate({"left":"0%"},1000);
       $("#slide" + slideno).stop().animate({"left":"100%"},1000);
       }
+      else if(animation == "slide") {
+        for(i=0; i < urls.length; i++){
+          if(i = slidenum) {
+            $("#slide" + i).animate({"right":"0%"},1000);
+          }
+        }
+      }
     }
     currentSlide = slideno;
     $(".gotoN").removeClass("active");
