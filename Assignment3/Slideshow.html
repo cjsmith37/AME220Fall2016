@@ -43,6 +43,7 @@ var goToSlide = function(slideno){
           } else if(i < slideno){
             $("#slide" + i).animate({"margin-right":"100%"},1000);
       }
+      }
     }
     currentSlide = slideno;
     $(".gotoN").removeClass("active");
