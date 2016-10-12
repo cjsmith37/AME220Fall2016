@@ -35,17 +35,13 @@ var goToSlide = function(slideno){
       /*$(".slide").animate({"center":"0%"},1000);
       $("#slide" + slideno).stop().animate({"center":"100%"},1000);*/
       for (i = 0; i < urls.length; i++) {
-      $(".slide").animate({"margin-left":"0%"},1000);
-      $("#slide" + slideno).stop().animate({"margin-left":"100%"},1000);
-      }
-      else if(animation == "slide") {
-        for(i = 0; i < urls.length; i++){
-          if(i = slideno) {
-            $("#slide" + i).animate({"margin-right":"0%"},1000);
-          } else {
-            $("#slide" + i).animate({"margin-right":"100%"},1000);
-          }
+        if (i == slideno) {
+      $("#slide" + i).stop().animate({"margin-left":"0%"},1000);
         }
+          else if(i > slideno) {
+            $("#slide" + i).animate({"margin-right":"0%"},1000);
+          } else if(i < slideno){
+            $("#slide" + i).animate({"margin-right":"100%"},1000);
       }
     }
     currentSlide = slideno;
