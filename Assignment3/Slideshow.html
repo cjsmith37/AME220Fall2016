@@ -33,7 +33,8 @@ var goToSlide = function(slideno){
     else if(animation === "slide"){
       // Assignment 3
       $(".slide").animate({"center":"0%"},1000);
-      $("#slide" + slideno).stop().animate({"center":"100%"},1000);      
+      $("#slide" + slideno).stop().animate({"center":"100%"},1000);   
+    }
       /*for (i = 0; i < urls.length; i++) {
       $(".slide").animate({"left":"0%"},1000);
       $("#slide" + slideno).stop().animate({"left":"100%"},1000);
@@ -46,8 +47,8 @@ var goToSlide = function(slideno){
             $("#slide" + i).animate({"right":"100%"},1000);
           }
         }
-      }*/
-    }
+      }
+    }*/
     currentSlide = slideno;
     $(".gotoN").removeClass("active");
     $("#gotoN" + slideno).stop().addClass("active");
