@@ -38,12 +38,12 @@ var goToSlide = function(slideno){
       var w = $("body").innerWidth();
       for (i = 0; i < urls.length; i++) {
         if (i == slideno) {
-      $("#slide" + i).stop().animate({"margin-left":"0px"},1000);
+      $("#slide" + i).stop().animate({"margin-left":"0px"},800);
         }
           else if(i > slideno) {
-            $("#slide" + i).animate({"margin-left":"-" + w + "px"},1000);
+            $("#slide" + i).animate({"margin-left":"-" + w + "px"},800);
           } else if(i < slideno){
-            $("#slide" + i).animate({"margin-left":w + "px"},1000);
+            $("#slide" + i).animate({"margin-left":w + "px"},800);
       }
       }
     }
