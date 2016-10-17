@@ -15,7 +15,7 @@ var main = function(){
   var mut = "";
   var slidemu = "";
   for(var i = 0; i < urls.length; i++){
-     mut += "<button onclick='gotoN" + i + "' class='gotoN' href='javascript:goToSlide(" + i + ")'>" + (i+1).toString() + "</button>";
+     mut += "<button onclick='goToSlide'" + i + "' class='gotoN' href='javascript:goToSlide(" + i + ")'>" + (i+1).toString() + "</button>";
      slidemu += "<div id='slide" + i + "' class='slide' style='background-image:url(" + urls[i] + ")'></div>";
   }
   document.getElementById("snWrapper").innerHTML = mut;
