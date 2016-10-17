@@ -73,3 +73,7 @@ body{
   border: 1px solid;
   color: red;
 }
+
+#snWrapper burron:nth-of-type(1) {
+    border: 1px red;
+}
