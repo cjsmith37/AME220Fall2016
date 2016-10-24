@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
 <script
   src="http://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -11,13 +12,11 @@
 <script>
   function assignBodyClassName()
   {
-    var cn ="";
+    var cn = "";
     var ua = window.navigator.userAgent;
-    //your logic here to determine id cn = 'mouse' or 'touch'
-    var cn =str.search(cn.id);
+    // your logic here to determine id cn = 'mouse' or 'touch'
     $("body").addClass(cn);
   }
-  
   var hash = window.location.hash.replace("#","");
   var urls = hash.split(",");
 var main = function(){
@@ -46,13 +45,12 @@ var main = function(){
       var w = $("body").innerWidth();
       for(i=0; i < urls.length; i++) {
         if(i == slidenum) {
-          $("#slide" + i).animate({"margin-left": "0px"}, 500, "swing")
+          $("#slide" + i).stop().animate({"margin-left": "0px"}, 500, "swing")
         }
         else {
-            $("#slide" + i).animate({"margin-left": (w * (i-slidenum)) + "px"}, 500, "swing")
+            $("#slide" + i).stop().animate({"margin-left": (w * (i-slidenum)) + "px"}, 500, "swing")
         }
       }
-     
     }
     currentSlide = slidenum;
     $("#snWrapper button").removeClass("active");
@@ -81,7 +79,9 @@ var main = function(){
       }
     }
 </script>
+
 </head>
+
 <body onload='main()'>
   <div id='ssWrapper'> </div>
   <div id='snWrapper'> </div>
@@ -90,4 +90,5 @@ var main = function(){
     <button onclick='moveRight()'><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
   </div>
 </body>
+
 </html>
