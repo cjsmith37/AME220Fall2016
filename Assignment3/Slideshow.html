@@ -29,6 +29,18 @@
       cn += "ipad";
       wt = "touch "
     }
+    
+    var w = $("body").innerWidth();
+    if(w < 480){
+      cn += "small ";
+    }
+    else if(w > 480 && w < 800){
+      cn += "med ";
+    }
+    else(w > 800) {
+      cn += "big ";
+    }
+    
     cn += wt;
     //width += 769;
     $("body").addClass(cn);
