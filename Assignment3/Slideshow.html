@@ -19,6 +19,7 @@
     if(ua.indexOf("android") > 0){
       cn += "android";
       wt = "touch "
+      
     }
     else if(ua.indexOf("iphone") > 0) {
       cn += "iphone";
@@ -29,10 +30,12 @@
       wt = "touch "
     }
     cn += wt;
+    //width += 769;
     $("body").addClass(cn);
   }
-  var hash = window.location.hash.replace("#","");
+  var hash = window.location.hash.replace("#"," ");
   var urls = hash.split(",");
+  
 var main = function(){
   assignBodyClassName();
   var mut = "";
