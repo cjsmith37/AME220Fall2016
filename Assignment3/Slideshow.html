@@ -1,7 +1,9 @@
 <!doctype html>
 <html>
 <head>
+
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+
 <script
   src="http://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -10,6 +12,17 @@
 <link href="basic.css" rel="stylesheet">
 
 <script>
+var resizeTimer;
+$(window).on('resize', function(e) {
+  console.log("resize event");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    // Run code here, resizing has "stopped"
+    console.log("resize-end event");
+    assignBodyClassName();
+            
+  }, 250);
+});
   function assignBodyClassName()
   {
     var cn = "";
@@ -28,8 +41,18 @@
       cn += "ipad ";
       wt = "touch "
     }
+    var w = $("body").innerWidth();
+    if(w < 480){
+      cn += "small ";
+    }
+    else if(w > 480 && w < 800){
+      cn += "med ";
+    }
+    else if(w > 800){
+      cn += "big ";
+    }
     cn += wt;
-    $("body").addClass(cn);
+    document.body.className = cn;
   }
   var hash = window.location.hash.replace("#","");
   var urls = hash.split(",");
@@ -65,34 +88,6 @@ var main = function(){
             $("#slide" + i).stop().animate({"margin-left": (w * (i-slidenum)) + "px"}, 500, "swing")
         }
       }
-      // old version
-      /*if(slidenum == 0) {
-        $("#slide0").animate({"margin-left": "0px"}, 500)
-        $("#slide1").animate({"margin-left": w + "px"}, 500)
-        $("#slide2").animate({"margin-left": w * 2 + "px"}, 500)
-        $("#slide3").animate({"margin-left": w * 3 + "px"}, 500)
-      }
-      else if(slidenum == 1) {
-        $("#slide0").animate({"margin-left": "-" + w + "px"}, 500)
-        $("#slide1").animate({"margin-left": "0px"}, 500)
-        $("#slide2").animate({"margin-left": w + "px"}, 500)
-        $("#slide3").animate({"margin-left": w * 2 + "px"}, 500)
-      }
-      else if(slidenum == 2) {
-        $("#slide0").animate({"margin-left": "-" + w * 2 + "px"}, 500)
-        $("#slide1").animate({"margin-left": "-" + w + "px"}, 500)
-        $("#slide2").animate({"margin-left": "0px"}, 500)
-        $("#slide3").animate({"margin-left": w + "px"}, 500)
-      }
-      else if(slidenum == 3) {
-        $("#slide0").animate({"margin-left": "-" + w * 3 + "px"}, 500)
-        $("#slide1").animate({"margin-left": "-" + w * 2 + "px"}, 500)
-        $("#slide2").animate({"margin-left": "-" + w + "px"}, 500)
-        $("#slide3").animate({"margin-left": "0px"}, 500)
-      }*/
-      //$(".slide").animate({"margin-left": w + "px"}, 1000)
-      //$(".slide").animate({"margin-right": "-" + w + "px"}, 1000)
-      //$("#slide" + slidenum).animate({"margin-left": "0px"}, 1000)
     }
     currentSlide = slidenum;
     $("#snWrapper button").removeClass("active");
