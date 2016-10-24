@@ -20,6 +20,8 @@ body{
     min-width: 100%;
     overflow: hidden;
     margin: 0;
+    transition-property: background;
+    transition-duration: 1s;
 }
 
 #ssWrapper{
@@ -30,6 +32,8 @@ body{
     margin-top: 1%;
     margin-bottom: 1%;
     background: transparent;
+    transition-property: margin-left;
+    transition-duration: 500ms;
 }
 
 #snWrapper
