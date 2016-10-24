@@ -66,6 +66,22 @@ body {
    text-decoration: none;
 }
 
-#snWrapper button.active {
+#snWrapper button.active
+{
   color: red;
+}
+
+body.small
+{
+  background: gray;
+}
+
+body.med
+{
+  background: lightblue;
+}
+
+body.big
+{
+  background: orange;
 }
