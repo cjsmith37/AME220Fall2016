@@ -33,7 +33,7 @@ body{
     margin-bottom: 1%;
     background: transparent;
     transition-property: margin-left scale;
-    transition-duration: 500ms;
+    transition-duration: 500ms, 2s;
 }
 
 #snWrapper
