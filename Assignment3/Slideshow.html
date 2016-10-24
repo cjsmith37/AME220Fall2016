@@ -16,38 +16,23 @@
     var wt = "web "
     var ua = window.navigator.userAgent.toLowerCase();
     // your logic here to determine id cn = 'mouse' or 'touch'
-    if(ua.indexOf("android") > 0){
-      cn += "android";
-      wt = "touch "
-      
-    }
-    else if(ua.indexOf("iphone") > 0) {
-      cn += "iphone";
+    if(ua.indexOf("android")>0){
+      cn += "android ";
       wt = "touch "
     }
-    else if(ua.indexOf("ipad") > 0) {
-      cn += "ipad";
+    else if(ua.indexOf("iphone")>0){
+      cn += "iphone ";
       wt = "touch "
     }
-    
-    var w = $("body").innerWidth();
-    if(w < 480){
-      cn += "small ";
+    else if(ua.indexOf("ipad")>0){
+      cn += "ipad ";
+      wt = "touch "
     }
-    else if(w > 480 && w < 800){
-      cn += "med ";
-    }
-    else(w > 800) {
-      cn += "big ";
-    }
-    
     cn += wt;
-    //width += 769;
     $("body").addClass(cn);
   }
-  var hash = window.location.hash.replace("#"," ");
+  var hash = window.location.hash.replace("#","");
   var urls = hash.split(",");
-  
 var main = function(){
   assignBodyClassName();
   var mut = "";
@@ -80,6 +65,34 @@ var main = function(){
             $("#slide" + i).stop().animate({"margin-left": (w * (i-slidenum)) + "px"}, 500, "swing")
         }
       }
+      // old version
+      /*if(slidenum == 0) {
+        $("#slide0").animate({"margin-left": "0px"}, 500)
+        $("#slide1").animate({"margin-left": w + "px"}, 500)
+        $("#slide2").animate({"margin-left": w * 2 + "px"}, 500)
+        $("#slide3").animate({"margin-left": w * 3 + "px"}, 500)
+      }
+      else if(slidenum == 1) {
+        $("#slide0").animate({"margin-left": "-" + w + "px"}, 500)
+        $("#slide1").animate({"margin-left": "0px"}, 500)
+        $("#slide2").animate({"margin-left": w + "px"}, 500)
+        $("#slide3").animate({"margin-left": w * 2 + "px"}, 500)
+      }
+      else if(slidenum == 2) {
+        $("#slide0").animate({"margin-left": "-" + w * 2 + "px"}, 500)
+        $("#slide1").animate({"margin-left": "-" + w + "px"}, 500)
+        $("#slide2").animate({"margin-left": "0px"}, 500)
+        $("#slide3").animate({"margin-left": w + "px"}, 500)
+      }
+      else if(slidenum == 3) {
+        $("#slide0").animate({"margin-left": "-" + w * 3 + "px"}, 500)
+        $("#slide1").animate({"margin-left": "-" + w * 2 + "px"}, 500)
+        $("#slide2").animate({"margin-left": "-" + w + "px"}, 500)
+        $("#slide3").animate({"margin-left": "0px"}, 500)
+      }*/
+      //$(".slide").animate({"margin-left": w + "px"}, 1000)
+      //$(".slide").animate({"margin-right": "-" + w + "px"}, 1000)
+      //$("#slide" + slidenum).animate({"margin-left": "0px"}, 1000)
     }
     currentSlide = slidenum;
     $("#snWrapper button").removeClass("active");
