@@ -1,20 +1,20 @@
-button:focus {
+button:focus{
   outline: none;
 }
 
-button {
+button{
   background: transparent;
   border: none;
 }
 
-#moveWrapper button {
+#moveWrapper button{
     min-width: 50px;
     text-align: center;
     display: inline-block;
     font-size: 40px;
 }
 
-body {
+body{
     min-height: 100%;
     position: absolute;
     min-width: 100%;
@@ -22,7 +22,7 @@ body {
     margin: 0;
 }
 
-#ssWrapper {
+#ssWrapper{
     height: 90%;
     width: 90%;
     position: absolute;
@@ -32,7 +32,8 @@ body {
     background: transparent;
 }
 
-#snWrapper {
+#snWrapper
+{
     position: absolute;
     height: 50px;
     bottom: 10px;
@@ -40,7 +41,8 @@ body {
     left: 5%;
 }
 
-#moveWrapper {
+#moveWrapper
+{
     position: absolute;
     bottom: 10px;
     width: 120px;
@@ -49,7 +51,7 @@ body {
     text-align: right;
 }
 
-.slide {
+.slide{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -57,7 +59,8 @@ body {
   background-size: cover;
 }
 
-#snWrapper button {
+#snWrapper button
+{
    min-width: 30px;
    display: inline-block;
    text-align: center;
