@@ -10,9 +10,11 @@
   #menu {
     border: 3px solid grey;
     border-radius: 5px;
-    width: 20%;
-    height: 50%;
+    width: 50px;
+    height: 200px;
     padding: 50px;
+    margin: auto;
+    
   }
   
   #play button{
@@ -23,8 +25,43 @@
    font-size: 24px;
    text-decoration: none;
   }
+  
+#boxAnimation {
+    position: absolute;
+    
+  }
+#animList {
+    position: absolute;
+    height: 50px;
+    bottom: 10px;
+    width: calc(90% - 120px);
+    left: 5%;
+}
+
+  #animList button
+{
+   min-width: 30px;
+   display: inline-block;
+   text-align: center;
+   line-height: 50px;
+   font-size: 24px;
+   text-decoration: none;
+}
+#animList button.active {
+  color: red;
+}
+  
 
 </style>
+
+<script>
+function boxAnim() {
+  $(boxAnimations).removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass();
+  });
+};
+
+</script>
   
 </head>
   
@@ -32,6 +69,11 @@
 <body>
   
   <div id='menu'></div>
+  <div id='play'>
+  <button onclick='boxAnim()'>PLAY</button>
+  </div>
+  <div id='boxAnimations'></div>
+  
   
 </body>
   
