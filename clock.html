@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html>
+<head>
 <style>
-
-  body{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    margin: auto;  
-  }
-  
-  #clockBox {
-  height: 300px;
-  width: 300px;
-  margin: auto;
-  margin-top: calc(50% - 150px);
-  border: 1px;  
-  border-radius: 4px;
-  }
-  
-  #num3 {
-    transform: translate(285px, 150px);
-  }
-  
-  #num12 {
-    transform: translate(150px, 2px);  
-  }
+body{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#clockBox{
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    margin-top: calc(50% - 150px);
+    border: 1px solid;
+    border-radius: 150px;
+}
+.num{
+  position: absolute;
+}
+#num12{
+    transform: translate(142px, 2px);
+}
+#num3{
+}
 </style>
-
+</head>
 <body>
+
 <div id='clockBox'>
-  <div class='num' id='num1'>1</div>
-  <div class='num' id='num2'>2</div>
-  <div class='num' id='num3'>3</div>
-  <div class='num' id='num4'>4</div>
-  <div class='num' id='num5'>5</div>
-  <div class='num' id='num6'>6</div>
-  <div class='num' id='num7'>7</div>
-  <div class='num' id='num8'>8</div>
-  <div class='num' id='num9'>9</div>
-  <div class='num' id='num10'>10</div>
-  <div class='num' id='num11'>11</div>
-  <div class='num' id='num12'>12</div>
-  
-  <div class='hand' id='hour'></div>
-  <div class='hand' id='minute'></div>
-  <div class='hand' id='second'></div>
+  <div class='num' id='num1'> 1 </div>
+  <div class='num' id='num2'> 2 </div>
+  <div class='num' id='num3'> 3 </div>
+  <div class='num' id='num4'> 4 </div>
+  <div class='num' id='num5'> 5 </div>
+  <div class='num' id='num6'> 6 </div>
+  <div class='num' id='num7'> 7 </div>
+  <div class='num' id='num8'> 8 </div>
+  <div class='num' id='num9'> 9 </div>
+  <div class='num' id='num10'> 10 </div>
+  <div class='num' id='num11'> 11 </div>
+  <div class='num' id='num12'> 12 </div>
+
+  <div class='hand' id='hour'> </div>
+  <div class='hand' id='min'> </div>
+  <div class='hand' id='sec'> </div>
+
 </div>
+
 </body>
-  
 </html>
