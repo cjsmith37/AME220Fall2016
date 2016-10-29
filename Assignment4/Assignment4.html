@@ -18,6 +18,10 @@
     position: absolute;
   }
   
+  ol#menu {
+    list-style-type:none;
+}
+  
   #play button{
    min-width: 400px;
    display: inline-block;
@@ -46,6 +50,7 @@
   }
   
 #animList {
+
 }
 
  #animList button
@@ -73,10 +78,19 @@ function boxAnim() {
   
 <body>
   
-  <div id='menu'></div>
+<div id='menu'>
+<ol>
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a class="active" href="#">Resources</a></li>
+<li><a href="#">Contact</a></li>
+</ol></div>
+  
   <div id='play'>
   <button onclick='boxAnim()'>PLAY</button>
   </div>
+  
   <div id='box'></div>
   
   
