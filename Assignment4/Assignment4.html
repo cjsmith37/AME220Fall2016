@@ -73,15 +73,25 @@ a.button{
 </style>
 
 <script>
-
+$(function() {
+  var animationName = 'animated bounce';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('a.button').on('click',function() {
+    $('box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    
+  });
+  
+});
 </script>
   
 </head>
   
   
-<body onload='boxAnim()'>
+<body>
   <div id='menu'>
-  <a href="#" class="button animated bounce">bounce</a> </div>
+  <a href="#" class="button">bounce</a> </div>
   
   <div id='play'>
   <button onclick='boxAnim(a)'>PLAY</button>
