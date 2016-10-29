@@ -52,18 +52,18 @@
   }
   
 
-a.button.active {
+#box button.active {
   color:red;
 }
+
 a.button:focus{
   outline: none;
-  
 }
 
 a.button{
   background: transparent;
   border: none;
-  font-size: 15px;
+  font-size: 20px;
   font-family: tahoma;
   text-decoration: none;
   -webkit-animation-duration: 1s;
@@ -83,16 +83,7 @@ $(function() {
     });
     });
 });
-  
-  $(function(a) {
-  var animationName = 'animated flash';
-  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#flash').on('click',function() {
-    $('#box').addClass(animationName).one(animationend,function() {
-    $(this).removeClass(animationName);
-    });
-    });
-});
+
 </script>
   
 </head>
