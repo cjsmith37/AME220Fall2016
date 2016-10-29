@@ -79,10 +79,16 @@ $(function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
-    
+    });
+  var animationName = 'animated flash';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('a.button').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
   });
-  
-});
+  });
 </script>
   
 </head>
@@ -90,15 +96,16 @@ $(function() {
   
 <body>
   <div id='menu'>
-  <a href="#" class="button">bounce</a> </div>
+  <a href="#" class="button">bounce</a> 
+  <a href="#" class="button">flash</a>
+  <a href="#" class="button">pulse</a></div>
   
   <div id='play'>
-  <button onclick='boxAnim(a)'>PLAY</button>
+  <button onclick='function()'>PLAY</button>
   </div> 
   
   <div id='box'> </div>
   
-  <div id='animList'> </div>
   </body>
   
 </html>
