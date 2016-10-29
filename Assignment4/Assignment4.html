@@ -52,17 +52,12 @@
     text-align: center;
   }
   
-
-#box button:active {
+a.button:active {
   color:red;
 }
 
 a.button:focus{
   outline: none;
-}
-
-a.button:hover {
-    color: red;
 }
 
 a.button{
@@ -128,6 +123,86 @@ $(function() {
     });
     });
 });
+  
+$(function() {
+  var animationName = 'animated swing';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#6').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+  
+$(function() {
+  var animationName = 'animated tada';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#7').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+
+$(function() {
+  var animationName = 'animated wobble';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#8').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+  
+$(function() {
+  var animationName = 'animated jello';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#9').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+
+$(function() {
+  var animationName = 'animated bounceIn';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#10').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+
+$(function() {
+  var animationName = 'animated bounceOut';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#11').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+  
+$(function() {
+  var animationName = 'animated fadeIn';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#12').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+  
+$(function() {
+  var animationName = 'animated fadeOut';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#13').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
 
 </script>
   
@@ -140,7 +215,15 @@ $(function() {
   <a href="#" class="button" id="2">flash</a>
   <a href="#" class="button" id="3">pulse</a>
   <a href="#" class="button" id="4">rubberband</a>  
-  <a href="#" class="button" id="5">shake</a>  
+  <a href="#" class="button" id="5">shake</a> 
+  <a href="#" class="button" id="6">swing</a>    
+  <a href="#" class="button" id="7">tada</a>
+  <a href="#" class="button" id="8">wobble</a>
+  <a href="#" class="button" id="9">jello</a>
+  <a href="#" class="button" id="10">bounceIn</a>
+  <a href="#" class="button" id="11">bounceOut</a>  
+  <a href="#" class="button" id="12">fadeIn</a> 
+  <a href="#" class="button" id="13">fadeOut</a>  
   </div>
   
   <div id='play'>
