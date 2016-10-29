@@ -74,14 +74,6 @@ a.button{
 <script>
 $(function() {
   var animationName = 'animated bounce';
-  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('a.button').on('click',function() {
-    $('#box').addClass(animationName).one(animationend,function() {
-    $(this).removeClass(animationName);
-    });
-    });
-
-  });
   var animationName = 'animated flash';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
   $('a.button').on('click',function() {
