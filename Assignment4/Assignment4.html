@@ -50,6 +50,7 @@
     border-radius: 5px;
     position: absolute;
   }
+  
 
 a.button.active {
   color:red;
@@ -69,14 +70,27 @@ a.button{
   -webkit-animation-iteration-count: 1;
 }
 
+#bounce a.button {
+  }
+#flash a.button {
+  }
 </style>
 
 <script>
 $(function() {
   var animationName = 'animated bounce';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#bounce').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+  
+  $(function() {
   var animationName = 'animated flash';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('a.button').on('click',function() {
+  $('#flash').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
