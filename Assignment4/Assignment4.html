@@ -105,6 +105,26 @@ $(function() {
     });
 });
 
+$(function() {
+  var animationName = 'animated rubberBand';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#4').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+  
+$(function() {
+  var animationName = 'animated shake';
+  var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  $('#5').on('click',function() {
+    $('#box').addClass(animationName).one(animationend,function() {
+    $(this).removeClass(animationName);
+    });
+    });
+});
+
 </script>
   
 </head>
@@ -114,7 +134,10 @@ $(function() {
   <div id='menu'>
   <a href="#" class="button" id="1">bounce</a> 
   <a href="#" class="button" id="2">flash</a>
-  <a href="#" class="button" id="3">pulse</a></div>
+  <a href="#" class="button" id="3">pulse</a>
+  <a href="#" class="button" id="4">rubberband</a>  
+  <a href="#" class="button" id="5">shake</a>  
+  </div>
   
   <div id='play'>
   <button onclick='function()'>PLAY</button>
