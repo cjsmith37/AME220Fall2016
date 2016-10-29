@@ -55,23 +55,40 @@
 
 }
 
- #animList button
-{
-
-}
 #animList button.active {
   
 }
-  
+#animList button:focus{
+  outline: none;
+}
+
+#animList button{
+  background: transparent;
+  border: none;
+}
 
 </style>
 
 <script>
-function boxAnim() {
+function boxAnim(a) {
   $(boxAnimations).removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $(this).removeClass();
   });
 };
+
+$(document).ready(function(){
+    $('.js--triggerAnimation').click(function(a){
+      a.preventDefault();
+      var anim = $('.js--animations').val();
+      testAnim(anim);
+    });
+
+    $('.js--animations').change(function(){
+      var anim = $(this).val();
+      testAnim(anim);
+    });
+  });
+
 
 </script>
   
@@ -81,16 +98,20 @@ function boxAnim() {
 <body>
   
 <div id='menu'>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Portfolio</a></li>
-<li><a class="active" href="#">Resources</a></li>
-<li><a href="#">Contact</a></li>
-</ul></div>
+<span id="animList" style="display: block;" class=""><ul>
+<li><button class="animated bounce">bounce</button></li>
+<li><button class="animated flash">flash</button></li>
+<li><button class="animated pulse">pulse</button></li>
+<li><button class="animated rubberband">rubberband</button></li>
+<li><button class="animated shake">shake</button></li>
+<li><button class="animated swing">swing</button></li>
+<li><button class="animated tada">tada</button></li>
+<li><button class="animated wobble">wobble</button></li>
+<li><button class="animated jello">jello</button></li>
+  </ul></span></div>
   
   <div id='play'>
-  <button onclick='boxAnim()'>PLAY</button>
+  <button onclick='boxAnim(a)'>PLAY</button>
   </div>
   
   <div id='box'></div>
