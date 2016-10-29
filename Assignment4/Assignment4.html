@@ -64,16 +64,13 @@ a.button{
   background: transparent;
   border: none;
   font-size: 15px;
+  font-family: tahoma;
   text-decoration: none;
   -webkit-animation-duration: 1s;
   -webkit-animation-delay: 2s;
   -webkit-animation-iteration-count: 1;
 }
 
-#bounce a.button {
-  }
-#flash a.button {
-  }
 </style>
 
 <script>
@@ -87,7 +84,7 @@ $(function() {
     });
 });
   
-  $(function() {
+  $(function(a) {
   var animationName = 'animated flash';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
   $('#flash').on('click',function() {
