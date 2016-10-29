@@ -55,28 +55,24 @@
 
 }
 
-#animList button.active {
+a.button.active {
   
 }
-#animList button:focus{
+a.button:focus{
   outline: none;
 }
 
-#animList button{
+a.button{
   background: transparent;
   border: none;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: 1;
 }
 
 </style>
 
 <script>
-function boxAnim(a) {
-  $(boxAnimations).removeClass().addClass(a + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      $(this).removeClass();
-  });
-};
-
-goToAnimation(currentAnimation);
 
 </script>
   
@@ -85,12 +81,15 @@ goToAnimation(currentAnimation);
   
 <body onload='boxAnim()'>
   <div id='menu'>
-  <a href="#" class="button">bounce</a> </div>
-  <div id='play'> </div>
+  <a href="#" class="button animated bounce">bounce</a> </div>
+  
+  <div id='play'>
+  <button onclick='boxAnim(a)'>PLAY</button>
+  </div> 
+  
   <div id='box'> </div>
-  <div id='animList'> 
-    
-  </div>
+  
+  <div id='animList'> </div>
   </body>
   
 </html>
