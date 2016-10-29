@@ -71,40 +71,27 @@
 
 <script>
 function boxAnim(a) {
-  $(boxAnimations).removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  $(boxAnimations).removeClass().addClass(a + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $(this).removeClass();
   });
 };
 
-
+goToAnimation(currentAnimation);
 
 </script>
   
 </head>
   
   
-<body>
-  
-<div id='menu'>
-<span id="animList" style="display: block;" class=""><ul>
-<li><button onclick='animated bounce'>bounce</button></li>
-<li><button class=".anim">flash</button></li>
-<li><button class="animated pulse">pulse</button></li>
-<li><button class="animated rubberBand">rubberBand</button></li>
-<li><button class="animated shake">shake</button></li>
-<li><button class="animated swing">swing</button></li>
-<li><button class="animated tada">tada</button></li>
-<li><button class="animated wobble">wobble</button></li>
-<li><button class="animated jello">jello</button></li>
-  </ul></span></div>
-  
-  <div id='play'>
-  <button onclick='boxAnim(a)'>PLAY</button>
+<body onload='boxAnim()'>
+  <div id='menu'>
+  <a href="#" class="button">bounce</a> </div>
+  <div id='play'> </div>
+  <div id='box'> </div>
+  <div id='animList'> 
+    
   </div>
-  
-  <div id='box'></div>
-  
-  
-</body>
+  </body>
   
 </html>
+
