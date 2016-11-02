@@ -67,7 +67,25 @@ a.button:focus{
 
 <script>
   
-  
+function playAnim(x) {
+    $('#box').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass();
+    });
+  };
+
+  $(document).ready(function(){
+    $('.button').click(function(e){
+      e.preventDefault();
+      var anim = $('.button').val();
+      playAnim(anim);
+    });
+
+    $('.js--animations').change(function(){
+      var anim = $(this).val();
+      playAnim(anim);
+    });
+  });
+-  
 function animSel(event) {
   animation = event.target.id;
   $(".button").removeClass("active");
@@ -123,7 +141,7 @@ $(function() {
 $(function() {
   var animationName = 'animated shake';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#5').on('click',function() {
+  $('#shake').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
@@ -133,7 +151,7 @@ $(function() {
 $(function() {
   var animationName = 'animated swing';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#6').on('click',function() {
+  $('#swing').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
@@ -143,7 +161,7 @@ $(function() {
 $(function() {
   var animationName = 'animated tada';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#7').on('click',function() {
+  $('#tada').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
@@ -153,7 +171,7 @@ $(function() {
 $(function() {
   var animationName = 'animated wobble';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#8').on('click',function() {
+  $('#wobble').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
@@ -163,7 +181,7 @@ $(function() {
 $(function() {
   var animationName = 'animated jello';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#9').on('click',function() {
+  $('#jello').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
@@ -173,7 +191,7 @@ $(function() {
 $(function() {
   var animationName = 'animated bounceIn';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#10').on('click',function() {
+  $('#bouncein').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
@@ -183,7 +201,7 @@ $(function() {
 $(function() {
   var animationName = 'animated bounceOut';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#11').on('click',function() {
+  $('#bounceout').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
@@ -193,7 +211,7 @@ $(function() {
 $(function() {
   var animationName = 'animated fadeIn';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#12').on('click',function() {
+  $('#fadein').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
@@ -203,7 +221,7 @@ $(function() {
 $(function() {
   var animationName = 'animated fadeOut';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-  $('#13').on('click',function() {
+  $('#fadeout').on('click',function() {
     $('#box').addClass(animationName).one(animationend,function() {
     $(this).removeClass(animationName);
     });
