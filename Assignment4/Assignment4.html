@@ -67,14 +67,20 @@ a.button:focus{
 
 <script>
   
-var playClick = "Play";
+var playClick = "play";
    playAnim();
 
-function playAnim() {
-    $('#box').addClass(animationName).one(animationend,function() {
-    $(this).removeClass(animationName);
-    });
+function playAnim(x) {
+  $('#box').removeClass().addClass( x + 'animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    $(this).removeClass();
+  });
+  };
+
+
 }
+  
+ 
+
   
 -
 $(function() {
