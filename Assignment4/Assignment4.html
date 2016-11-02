@@ -69,19 +69,18 @@ a.button:focus{
   
 var playClick = "play";
    playAnim();
-
-function playAnim() {
-  $('#box').removeClass().addClass( x + 'animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    $(this).removeClass();
-  });
-  };
-
-
+  
+function animSel(event) {
+  animation = event.target.id;
+  $(".button").removeClass("active");
+  $("#" + animation).stop().addClass("active:);
 }
-  
- 
 
-  
+function play() {
+  $(".button").removeClass("active");
+  $("#box").removeClass();
+  $("#box").addClass("animated " + animation);
+}
 -
 $(function() {
   var animationName = 'animated bounce';
@@ -237,8 +236,8 @@ $(
   <a href="#" class="button" id="13">fadeOut</a>  
   </div>
   
-  <div id='play'>
-  <button onclick='playAnim()'>PLAY</button>
+  <div id='playButton'>
+  <button onclick='play()' class="button" id="play">PLAY</button>
   </div> 
   
   <div id='box'> </div>
