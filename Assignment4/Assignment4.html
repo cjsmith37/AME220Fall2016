@@ -70,7 +70,7 @@ a.button:focus{
 var playClick = "play";
    playAnim();
 
-function playAnim(x) {
+function playAnim() {
   $('#box').removeClass().addClass( x + 'animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
     $(this).removeClass();
   });
