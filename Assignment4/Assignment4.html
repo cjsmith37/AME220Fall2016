@@ -86,18 +86,7 @@ a.button:focus{
     });
   });*/
 -  
-function playAnim(event) {
-  animationName = event.target.id;
-  $(".button").removeClass("active");
-  $("#" + animationName).stop().addClass("active");
-}
 
-function play() {
-  $(".button").removeClass("active");
-  $("#box").removeClass();
-  $("#box").addClass("animated " + animationName);
-}
--
 $(function() {
   var animationName = 'animated bounce';
   var animationend = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -228,7 +217,17 @@ $(function() {
     });
 });
   
+function playAnim(event) {
+  animationName = event.target.id;
+  $(".playbutton").removeClass("active");
+  $("#" + animationName).stop().addClass("active");
+}
 
+function play() {
+  $(".playbutton").removeClass("active");
+  $("#box").removeClass();
+  $("#box").addClass("animated " + animationName);
+}
 </script>
   
 </head>
