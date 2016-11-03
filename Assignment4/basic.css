@@ -1,5 +1,4 @@
-<style>
-  .menu {
+.menu {
     border: 3px solid grey;
     border-radius: 5px;
     width: 50px;
@@ -55,5 +54,3 @@ a.button:focus{
   outline: none;
   color: red;
 }
-  
-</style>
