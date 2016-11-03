@@ -67,6 +67,34 @@ a.button:focus{
 
 <script>
   
+var hash = window.location.hash.replace("#","");
+var anims = hash.split(",");
+var main = function(){
+  assignAnimationClassName();
+  var animname = "";
+  var animationnum = "";
+  for(var i = 0; i < anims.length; i++){
+     animname += "<button onclick='goToAnim(" + i + ")'>" + (i+1).toString() + "</button>";
+     animationnum += "<div id='box" + i + "' class='menu' style='background-image:anim(" + anims[i] + ")'></div>";
+  }
+  document.getElementById("box").innerHTML = animname;
+ // document.getElementById("ssWrapper").style.opacity = "0"
+  document.getElementById("box").innerHTML = animationnum;
+  setTimeout("goToAnim(0)", 100)
+}
+
+var currentAnim = 0;
+  var goToAnim = function(animnum){
+    setTimeout('document.getElementById("#box").style.opacity = "1"',550);
+    if(animation == "fade") {
+      $(".menu").css({"opacity":"0"});
+      $("#menu" + animnum).stop().css({"opacity":"1"});
+    }
+    currentAnim = animnum;
+    $("#play button").removeClass("active");
+    $("#play button:nth-of-type(" + (animnum + 1) + ")").stop().addClass("active");
+  }
+  
 /*function playAnim(x) {
     $('#box').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $(this).removeClass();
@@ -85,6 +113,18 @@ a.button:focus{
       playAnim(anim);
     });
   });*/
+  
+ /* function playAnim(event) {
+  animationName = event.target.id;
+  $(".playbutton").removeClass("active");
+  $("#" + animationName).stop().addClass("active");
+}
+
+function play() {
+  $(".playbutton").removeClass("active");
+  $("#box").removeClass();
+  $("#box").addClass("animated " + animationName);
+}*/
 -  
 
 $(function() {
@@ -217,17 +257,7 @@ $(function() {
     });
 });
   
-function playAnim(event) {
-  animationName = event.target.id;
-  $(".playbutton").removeClass("active");
-  $("#" + animationName).stop().addClass("active");
-}
 
-function play() {
-  $(".playbutton").removeClass("active");
-  $("#box").removeClass();
-  $("#box").addClass("animated " + animationName);
-}
 </script>
   
 </head>
