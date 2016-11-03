@@ -7,7 +7,7 @@
         crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <style>
-  #menu {
+  .menu {
     border: 3px solid grey;
     border-radius: 5px;
     width: 50px;
@@ -67,35 +67,35 @@ a.button:focus{
 
 <script>
   
-/*function playAnim(x) {
+function playAnim(x) {
     $('#box').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $(this).removeClass();
     });
   };
 
   $(document).ready(function(){
-    $('.button').click(function(e){
+    $('.playbutton').click(function(e){
       e.preventDefault();
-      var anim = $('.button').val();
+      var anim = $('.menu').val();
       playAnim(anim);
     });
 
-    $('.js--animations').change(function(){
+    $('.menu').change(function(){
       var anim = $(this).val();
       playAnim(anim);
     });
-  });*/
+  });
 -  
-function animSel(event) {
-  animation = event.target.id;
+/*function animSel(event) {
+  animationName = event.target.id;
   $(".button").removeClass("active");
-  $("#" + animation).stop().addClass("active");
+  $("#" + animationName).stop().addClass("active");
 }
 
 function play() {
   $(".button").removeClass("active");
   $("#box").removeClass();
-  $("#box").addClass("animated " + animation);
+  $("#box").addClass("animated " + animation);*/
 }
 -
 $(function() {
@@ -235,7 +235,7 @@ $(function() {
   
   
 <body>
-  <div id='menu'>
+  <div class='menu'>
   <a href="#" class="button" id="1">bounce</a> 
   <a href="#" class="button" id="2">flash</a>
   <a href="#" class="button" id="3">pulse</a>
@@ -252,7 +252,7 @@ $(function() {
   </div>
   
   <div id='play'>
-  <button onclick='play()' class="button" id="playbutton">PLAY</button>
+  <button onclick='play()' class="playbutton">PLAY</button>
   </div> 
   
   <div id='box'> </div>
