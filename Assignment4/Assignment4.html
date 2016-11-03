@@ -67,7 +67,7 @@ a.button:focus{
 
 <script>
   
-function playAnim(x) {
+/*function playAnim(x) {
     $('#box').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $(this).removeClass();
     });
@@ -84,9 +84,9 @@ function playAnim(x) {
       var anim = $(this).val();
       playAnim(anim);
     });
-  });
+  });*/
 -  
-/*function animSel(event) {
+function playAnim(event) {
   animationName = event.target.id;
   $(".button").removeClass("active");
   $("#" + animationName).stop().addClass("active");
@@ -95,7 +95,7 @@ function playAnim(x) {
 function play() {
   $(".button").removeClass("active");
   $("#box").removeClass();
-  $("#box").addClass("animated " + animation);*/
+  $("#box").addClass("animated " + animationName);
 }
 -
 $(function() {
