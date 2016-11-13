@@ -67,8 +67,6 @@ var imageUploaded = function()
                 
                 document.getElementById("imagePreview").innerHTML.result = "img.height" + "img.width";
                 
-                
-                -
             }
             img.src = data;
         };  
@@ -83,6 +81,7 @@ var imageUploaded = function()
 <body>
   <input type="file" name="uploadImage" id="uploadImage" onchange="imageUploaded()">
   <div id='result'>
+  <img id="imagePreview">
 
     </div>
 </body>
