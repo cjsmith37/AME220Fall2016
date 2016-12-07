@@ -9,8 +9,9 @@
   var wordCount = {};
     var getCloudMU = function(data)
     {
-      var result = "";
+      var result = "wordCount[]";
       //write code here
+       
        wordCount = {};theWords = []; allWords = data.match(/\b\w+\b/g);   //get all words in the document
  
         for(var i = 0; i < allWords.length; i = i + 1){
@@ -27,7 +28,7 @@
         }
 
      var theWords = Object.keys(wordCount); // all words over 5 characters 
-     var result = "";
+     var result = wordCount;
 
       for(var i = 0; i < theWords.length; i = i + 1){
           result = result + " " + theWords[i];
